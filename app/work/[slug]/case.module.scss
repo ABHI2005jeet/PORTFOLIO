@@ -6,6 +6,7 @@
 .summary { max-width: 66ch; margin-top: 1.4rem; color: var(--mist); font-size: clamp(1.05rem, 1.7vw, 1.25rem); }
 .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-top: 1.5rem; }
 .links a { display: inline-flex; min-height: 44px; align-items: center; gap: 0.45rem; font-size: 0.83rem; }.links svg { color: var(--ice); }
+.repositoryUrl { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
 .caseBody { display: grid; grid-template-columns: minmax(220px, 0.62fr) minmax(0, 1.38fr); gap: clamp(3rem, 9vw, 9rem); padding-top: 2rem; border-top: 1px solid var(--line-strong); }
 .projectFacts { display: flex; flex-direction: column; gap: 2rem; }
 .projectFacts > div { padding-bottom: 1.4rem; border-bottom: 1px solid var(--line); }

@@ -40,7 +40,7 @@ const personSchema = {
   url: siteUrl,
   description: site.positioning,
   alumniOf: { "@type": "CollegeOrUniversity", name: "Vellore Institute of Technology" },
-  sameAs: [site.profiles.github, site.profiles.linkedin, site.profiles.leetcode],
+  sameAs: [site.profiles.github, site.profiles.linkedin, site.profiles.leetcode, site.profiles.hackerrank],
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

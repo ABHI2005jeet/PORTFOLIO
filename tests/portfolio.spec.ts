@@ -75,6 +75,30 @@ test("Email is absent from rendered HTML and markdown twins return Markdown", as
   expect((await request.get("/markdown/index")).status()).toBe(404);
 });
 
+test("Profile links and project contribution credits use the supplied details", async ({ page, request }) => {
+  await page.goto("/");
+  const hackerRankLinks = page.getByRole("link", { name: /HackerRank/ });
+  await expect(hackerRankLinks).toHaveCount(2);
+  await expect(hackerRankLinks.first()).toHaveAttribute(
+    "href",
+    "https://www.hackerrank.com/profile/dhirendrakumar82",
+  );
+  const leetCodeLinks = page.getByRole("link", { name: /LeetCode/ });
+  await expect(leetCodeLinks.first()).toHaveAttribute(
+    "href",
+    "https://leetcode.com/u/ABHI_2005_jeeT/",
+  );
+
+  await page.goto("/work/project-blindspot");
+  const blindspotUrl = "https://github.com/Hareekshith/BlindSpot";
+  await expect(page.getByRole("link", { name: blindspotUrl })).toHaveAttribute("href", blindspotUrl);
+  expect(await (await request.get("/llms.txt")).text()).toContain(blindspotUrl);
+
+  await page.goto("/work/aegis-federated-learning");
+  await expect(page.getByText(/We decided the project and features together/)).toBeVisible();
+  await expect(page.getByText(/Gitanjali handled AWS services and deployment/).first()).toBeVisible();
+});
+
 test("Metadata avoids localhost canonicals and missing projects return a real 404", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("html")).toHaveAttribute("lang", "en-IN");

@@ -44,7 +44,7 @@ export default function HomePage() {
             <div className={styles.proofStrip} data-hero-intro aria-label={`Profile information as of ${site.proofAsOf}`}>
               <a href={site.profiles.leetcode} target="_blank" rel="noopener noreferrer"><strong>{site.proof.leetcode}</strong><span>LeetCode</span></a>
               <a href={site.profiles.github} target="_blank" rel="noopener noreferrer"><strong>{site.proof.github}</strong><span>GitHub</span></a>
-              <div><strong>{site.proof.hackerrank}</strong><span>HackerRank</span></div>
+              <a href={site.profiles.hackerrank} target="_blank" rel="noopener noreferrer"><strong>{site.proof.hackerrank}</strong><span>HackerRank</span></a>
               <small>As of {site.proofAsOf}</small>
             </div>
           </div>

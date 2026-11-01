@@ -19,6 +19,7 @@ export const site = {
   profiles: {
     github: "https://github.com/ABHI2005jeet",
     leetcode: "https://leetcode.com/u/ABHI_2005_jeeT/",
+    hackerrank: "https://www.hackerrank.com/profile/dhirendrakumar82",
     linkedin: "https://www.linkedin.com/in/abhijeet-kumar-357ba5329/",
     instagram: "https://www.instagram.com/abhi.jeet.2005/",
   },

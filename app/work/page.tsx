@@ -27,7 +27,7 @@ export default function WorkPage() {
       </section>
       <section className={`pageShell ${styles.list}`} id="project-list" aria-label="Project list">
         <WorkExplorer />
-        <aside className={styles.pendingNote}><span className="monoLabel">A NOTE</span><p><strong>Optiv — Project BlindSpot</strong> is included as a contribution entry. The public repository link could not be verified, so further description and links are pending.</p></aside>
+        <aside className={styles.pendingNote}><span className="monoLabel">A NOTE</span><p><strong>Optiv — Project BlindSpot</strong> is listed as a contribution and links to the supplied repository. Unconfirmed project details are left out.</p></aside>
       </section>
       <section className={`pageShell ${styles.workEnd}`}><p>Most of these are learning projects. Each page sticks to what I can point back to in a repository or verified résumé detail.</p><a href={site.profiles.github} target="_blank" rel="noopener noreferrer">More on GitHub <ArrowDownRight aria-hidden="true" size={16} /></a></section>
     </>

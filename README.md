@@ -1,6 +1,6 @@
 # Abhijeet Kumar — Portfolio
 
-Personal portfolio built with Next.js App Router, React, TypeScript, SCSS Modules, GSAP, Motion, and a lazily loaded Three.js hero shader.
+Personal portfolio built with Next.js App Router, React, TypeScript, SCSS Modules, GSAP, CSS transitions, and a lazily loaded Three.js hero shader.
 
 ## Run locally
 
@@ -16,6 +16,6 @@ Personal portfolio built with Next.js App Router, React, TypeScript, SCSS Module
 
 The analyze script creates a webpack bundle report. The e2e script runs the Playwright and axe checks.
 
-Set NEXT_PUBLIC_SITE_URL to the deployed portfolio origin to enable canonical URLs, social image metadata, and sitemap entries. It is intentionally unset while no portfolio domain has been provided.
+No custom domain has been provided. Local preview omits canonical URLs; set NEXT_PUBLIC_SITE_URL to the Vercel deployment origin to enable canonical URLs, social image metadata, and sitemap entries after deployment.
 
 Project facts are maintained in content/. Unverified details and art-direction decisions are tracked in TODO.md.

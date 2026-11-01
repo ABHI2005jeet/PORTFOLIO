@@ -54,17 +54,17 @@ export const skillTracks: {
   {
     id: "cloud",
     label: "Cloud",
-    intro: "Cloud work is currently grounded in coursework and project deployments.",
+    intro: "Cloud learning is grounded in coursework and a collaborative project.",
     groups: [
       {
         depth: "Building",
-        items: ["AWS Amplify project deployment", "Vercel and Render project deployments"],
-        evidence: ["AegisFL — Early Heart Disease Detection", "ADRDE Agra Dashboard Portal"],
+        items: ["Vercel and Render project deployments"],
+        evidence: ["ADRDE Agra Dashboard Portal"],
       },
       {
         depth: "Practising",
-        items: ["Microsoft Azure Fundamentals (AZ-900)", "Cloud deployment coursework"],
-        evidence: ["AZ-900 certification", "AWS Amplify coursework project"],
+        items: ["Microsoft Azure Fundamentals (AZ-900)", "AWS architecture in a team project", "Cloud deployment coursework"],
+        evidence: ["AZ-900 certification", "AegisFL architecture and code; AWS services and deployment by Gitanjali"],
       },
       {
         depth: "Exploring",

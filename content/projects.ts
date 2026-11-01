@@ -204,18 +204,18 @@ export const projects: Project[] = [
     liveUrl: "https://main.d27bxeyf5b5sth.amplifyapp.com/",
     stack: ["Next.js", "Python", "FedAvg", "AWS Lambda", "Amazon S3", "DynamoDB", "API Gateway", "AWS Amplify"],
     illustration: "federated",
-    role: "Designed the project architecture and wrote the core implementation. Gitanjali later made code changes.",
+    role: "Co-decided the project and feature set; designed the architecture and wrote the code. Gitanjali handled AWS services and deployment.",
     caseStudy: {
-      role: "Designed the architecture and wrote the core implementation. Gitanjali later adjusted the code and made changes.",
+      role: "We decided the project and features together. I designed the architecture and wrote the code; Gitanjali handled AWS services and deployment.",
       approach:
         "The repository describes a FedAvg prototype across simulated hospital nodes, with raw records kept at the simulated nodes during training.",
       architecture:
         "A Next.js dashboard on AWS Amplify connects to a serverless backend using API Gateway, Lambda, DynamoDB, and S3, as described in the repository.",
       decisions: [
         "Used simulated nodes to explore federated training without building the project around one pooled dataset.",
-        "Hosted the Amplify frontend in a region separate from the backend services because Amplify hosting was not available in the backend region chosen for the project.",
+        "The Amplify frontend runs in a region separate from backend services because the selected backend region did not offer Amplify hosting.",
       ],
-      outcome: "The course prototype is deployed on AWS Amplify; the source repository describes it as a prototype.",
+      outcome: "The course prototype is deployed on AWS Amplify. Gitanjali handled the AWS services and deployment.",
     },
   },
   {
@@ -251,9 +251,10 @@ export const projects: Project[] = [
   {
     slug: "project-blindspot",
     title: "Optiv — Project BlindSpot",
-    summary: "TODO(abhijeet): add an approved project description and working public repository URL.",
+    summary: "A contribution to Optiv's Project BlindSpot.",
     track: "security",
     visibility: "listed",
+    repoUrl: "https://github.com/Hareekshith/BlindSpot",
     stack: [],
     role: "Contributor (as confirmed by Abhijeet).",
     pendingDetails: true,
