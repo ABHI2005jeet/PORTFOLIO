@@ -1,0 +1,73 @@
+.motionRoot {
+  display: contents;
+}
+
+.bootPanel {
+  position: fixed;
+  z-index: var(--z-overlay);
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1.5rem, 5vw, 4rem) var(--gutter);
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgb(9 10 15 / 58%), transparent 45%),
+    linear-gradient(0deg, rgb(9 10 15 / 76%), transparent 44%);
+  color: var(--bone);
+}
+
+.bootReadout {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: min(100%, 1320px);
+  margin: 0 auto 0.8rem;
+}
+
+.bootLabel,
+.bootPanel p {
+  color: var(--mist);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.bootValue {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 0.9;
+  font-variant-numeric: tabular-nums;
+}
+
+.bootValue small {
+  margin-left: 0.2rem;
+  color: var(--violet);
+  font: 500 0.8rem var(--font-mono);
+}
+
+.bootTrack {
+  width: min(100%, 1320px);
+  height: 1px;
+  margin: 0 auto 0.8rem;
+  background: var(--line-strong);
+}
+
+.bootTrack span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--ice);
+}
+
+.bootPanel p {
+  width: min(100%, 1320px);
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .bootPanel {
+    padding-bottom: 1.5rem;
+  }
+}

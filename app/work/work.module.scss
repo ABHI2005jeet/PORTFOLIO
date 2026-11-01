@@ -1,0 +1,16 @@
+.intro { padding-block: clamp(5rem, 10vw, 9rem) 2rem; }
+.introRow { display: grid; grid-template-columns: 1.1fr 0.7fr; align-items: end; gap: 3rem; margin-top: 2rem; }
+.intro h1 { font-family: var(--font-display); font-size: clamp(4rem, 9vw, 8.5rem); font-weight: 400; letter-spacing: -0.06em; line-height: 0.9; }
+.intro h1 em { color: var(--ice); font-weight: 400; }
+.introRow > p { max-width: 48ch; margin-bottom: 0.4rem; color: var(--mist); font-size: 1.08rem; }
+.jumpLink { display: inline-flex; min-height: 48px; align-items: center; gap: 0.65rem; margin-top: 2rem; color: var(--bone); font-size: 0.86rem; }
+.jumpLink svg, .workEnd svg { color: var(--ice); }
+.list { padding-block: 1rem var(--section-space); }
+.pendingNote { display: flex; gap: 1.5rem; padding: 1.2rem; margin-top: 3rem; border: 1px solid var(--line); }
+.pendingNote > span { min-width: 5rem; padding-top: 0.2rem; }
+.pendingNote p { color: var(--mist); font-size: 0.83rem; }
+.pendingNote strong { color: var(--bone); font-weight: 500; }
+.workEnd { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 2rem 5rem; border-top: 1px solid var(--line); }
+.workEnd p { color: var(--mist); font-size: 0.86rem; }
+.workEnd a { display: inline-flex; min-height: 44px; flex-shrink: 0; align-items: center; gap: 0.5rem; font-size: 0.82rem; }
+@media (max-width: 700px) { .introRow { grid-template-columns: 1fr; gap: 1.8rem; }.intro h1 { font-size: clamp(3.8rem, 14vw, 6rem); }.pendingNote { flex-direction: column; gap: 0.65rem; }.workEnd { align-items: start; flex-direction: column; gap: 0.8rem; } }

@@ -1,0 +1,191 @@
+.header {
+  position: sticky;
+  z-index: var(--z-header);
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(233 231 226 / 7%);
+  background: rgb(9 10 15 / 90%);
+  backdrop-filter: blur(16px);
+}
+
+.inner {
+  display: flex;
+  width: min(100%, var(--content-width));
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.desktopNav,
+.actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.9rem, 2vw, 1.8rem);
+}
+
+.desktopNav a,
+.resumeLink {
+  position: relative;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--mist);
+  font-size: 0.83rem;
+  transition: color var(--duration-fast) ease;
+}
+
+.desktopNav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0.45rem;
+  left: 0;
+  height: 1px;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--ice);
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.desktopNav a:hover,
+.desktopNav a[aria-current="location"],
+.resumeLink:hover {
+  color: var(--bone);
+}
+
+.desktopNav a:hover::after,
+.desktopNav a[aria-current="location"]::after {
+  transform: scaleX(1);
+}
+
+.resumeLink {
+  gap: 0.45rem;
+  color: var(--bone);
+}
+
+.resumeLink span {
+  color: var(--ice);
+}
+
+.menuButton {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  background: transparent;
+  cursor: pointer;
+}
+
+.progress {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--violet), var(--ice));
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    min-height: 68px;
+  }
+
+  .desktopNav {
+    gap: 1rem;
+  }
+
+  .desktopNav a {
+    font-size: 0.78rem;
+  }
+
+  .actions {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .inner {
+    min-height: 64px;
+  }
+
+  .desktopNav,
+  .actions {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .mobileMenu {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.8rem var(--gutter) 1.2rem;
+    border-bottom: 1px solid var(--line);
+    background: var(--dusk);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms;
+  }
+
+  .mobileMenuOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+
+  .mobileMenu a {
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(233 231 226 / 7%);
+    color: var(--bone);
+    font-size: 1rem;
+  }
+
+  .mobileMenu a[aria-current="location"] {
+    color: var(--ice);
+  }
+
+  .mobileMenu .toggle {
+    align-self: flex-start;
+    margin-top: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobileMenu {
+    transition: none;
+  }
+}

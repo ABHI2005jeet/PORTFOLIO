@@ -1,0 +1,21 @@
+.explorer { border-top: 1px solid var(--line-strong); }
+.tabRail { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-bottom: 1px solid var(--line-strong); }
+.tabRail button { display: flex; min-height: 68px; align-items: center; justify-content: space-between; gap: 0.6rem; padding: 0 1rem; border: 0; border-right: 1px solid var(--line); color: var(--mist); background: transparent; cursor: pointer; text-align: left; transition: color 180ms ease, background 180ms ease; }
+.tabRail button:first-child { border-left: 1px solid var(--line); }
+.tabRail button[aria-selected="true"] { color: var(--bone); background: rgb(140 169 216 / 7%); box-shadow: inset 0 -2px var(--ice); }
+.tabRail button span { color: var(--violet); font: 0.61rem var(--font-mono); }
+.panel { padding-block: 1.7rem 0.4rem; }
+.panelIntro { display: flex; justify-content: space-between; gap: 2rem; padding-bottom: 1.6rem; color: var(--mist); }
+.panelIntro p { max-width: 52ch; }
+.panelIntro > span { flex-shrink: 0; }
+.depthGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.depth { min-width: 0; padding: 1.2rem; border: 1px solid var(--line); background: rgb(16 18 26 / 42%); }
+.depth h3 { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; font: 600 0.83rem var(--font-mono); }
+.depth h3 span { width: 7px; height: 7px; border-radius: 50%; background: var(--ice); }
+.depth h3 span[data-depth="practising"] { background: var(--ember); }.depth h3 span[data-depth="exploring"] { background: var(--violet); }
+.depth ul { display: flex; flex-wrap: wrap; gap: 0.45rem; padding: 0; margin: 0; list-style: none; }
+.depth li { padding: 0.35rem 0.55rem; border: 1px solid var(--line); color: var(--bone); font-size: 0.78rem; }
+.evidence { margin-top: 1rem; color: var(--mist); font-size: 0.72rem; line-height: 1.5; }
+.evidence span { display: block; margin-bottom: 0.25rem; color: var(--ice); font: 0.58rem var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; }
+@media (max-width: 800px) { .depthGrid { grid-template-columns: 1fr; }.depth { padding: 1rem; } }
+@media (max-width: 580px) { .tabRail { grid-template-columns: repeat(2, 1fr); }.tabRail button { min-height: 56px; font-size: 0.85rem; }.panelIntro { flex-direction: column; gap: 0.6rem; } }

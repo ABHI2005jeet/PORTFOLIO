@@ -1,0 +1,37 @@
+:root {
+  color-scheme: dark;
+  --void: #090a0f;
+  --dusk: #10121a;
+  --raised: #171a24;
+  --bone: #e9e7e2;
+  --mist: #9a9caa;
+  --violet: #7773a8;
+  --ice: #8ca9d8;
+  --ember: #ff8a5b;
+  --line: rgb(233 231 226 / 12%);
+  --line-strong: rgb(233 231 226 / 24%);
+  --atmo-indigo: #1b1f4b;
+  --atmo-violet: #3b2a6b;
+  --atmo-teal: #0f4c5c;
+  --font-body: var(--font-hanken), "Segoe UI", sans-serif;
+  --font-display: "Iowan Old Style", "Baskerville", Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-geist-mono), Consolas, monospace;
+  --content-width: 1320px;
+  --gutter: clamp(1.25rem, 5.4vw, 5.5rem);
+  --section-space: clamp(6rem, 12vw, 11.5rem);
+  --radius-small: 4px;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --duration-fast: 180ms;
+  --duration-base: 300ms;
+  --focus: 0 0 0 3px var(--void), 0 0 0 5px var(--ice);
+  --z-content: 1;
+  --z-header: 20;
+  --z-overlay: 40;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 1ms;
+    --duration-base: 1ms;
+  }
+}

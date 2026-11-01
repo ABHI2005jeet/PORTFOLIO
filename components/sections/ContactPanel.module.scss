@@ -1,0 +1,15 @@
+.contactSection { padding-block: clamp(4.5rem, 9vw, 8rem); border-block: 1px solid var(--line); background: radial-gradient(ellipse at 78% 82%, rgb(59 42 107 / 24%), transparent 38rem), linear-gradient(115deg, rgb(16 18 26 / 92%), rgb(9 10 15 / 96%)); }
+.contactInner { position: relative; }
+.contactTop { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.contactTop .monoLabel { text-align: right; }
+.contactInner h2 { margin-top: clamp(2.5rem, 6vw, 5rem); font-family: var(--font-display); font-size: clamp(3.4rem, 8vw, 8rem); font-weight: 400; letter-spacing: -0.055em; line-height: 0.95; }
+.contactInner h2 em { color: var(--ice); font-weight: 400; }
+.contactBottom { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-top: 2.5rem; }
+.contactBottom > p { max-width: 50ch; color: var(--mist); }
+.contactActions { display: flex; align-items: center; gap: 0.8rem; }
+.emailButton, .copyButton { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 0.65rem; padding: 0 1rem; border: 1px solid var(--line-strong); cursor: pointer; }
+.emailButton { border-color: var(--ice); color: var(--void); background: var(--ice); font-weight: 600; }
+.copyButton { color: var(--bone); background: transparent; }
+.copyButton svg { color: var(--ice); }
+.emailButton:hover { background: #adc3e6; }.copyButton:hover { background: rgb(233 231 226 / 6%); }
+@media (max-width: 640px) { .contactTop { align-items: start; }.contactTop .monoLabel { max-width: 14ch; }.contactBottom { align-items: start; flex-direction: column; gap: 1.2rem; }.contactActions { flex-wrap: wrap; } }

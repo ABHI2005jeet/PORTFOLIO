@@ -1,0 +1,36 @@
+.toggle {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  background: transparent;
+  color: var(--mist);
+  cursor: pointer;
+  font-size: 0.76rem;
+  transition: color var(--duration-fast) ease, border-color var(--duration-fast) ease;
+}
+
+.toggle:hover:not(:disabled) {
+  border-color: var(--line-strong);
+  color: var(--bone);
+}
+
+.toggle:disabled {
+  cursor: wait;
+}
+
+.indicator {
+  width: 0.46rem;
+  height: 0.46rem;
+  border-radius: 50%;
+  background: var(--mist);
+  transition: background var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+.indicator[data-on="true"] {
+  background: var(--ember);
+  box-shadow: 0 0 0.7rem rgb(255 138 91 / 32%);
+}
