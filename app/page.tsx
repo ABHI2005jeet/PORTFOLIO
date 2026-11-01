@@ -25,10 +25,21 @@ export default function HomePage() {
       ]} />
       <section className={styles.hero} id="top" aria-labelledby="hero-title">
         <HeroAtmosphere />
-        <div className={`pageShell ${styles.heroGrid}`}>
-          <div className={styles.heroCopy}>
-            <div className={styles.availability}><span aria-hidden="true" /> Looking for software development internships</div>
-            <p className="sectionEyebrow">Software development · security · cloud</p>
+        <div className={styles.portraitGlow} aria-hidden="true" />
+        <div className={styles.heroPortrait} aria-hidden="true">
+          <Image src="/images/profile/portrait-hero-halftone.png" alt="" fill priority fetchPriority="high" sizes="(max-width: 640px) 50vw, (max-width: 1100px) 68vw, 720px" className={styles.portraitImage} />
+        </div>
+        <div className={`pageShell ${styles.heroFrame}`}>
+          <div className={styles.heroTopline}>
+            <p className={styles.availability}><span aria-hidden="true" /> Looking for software development internships</p>
+            <p className={styles.location}><MapPin aria-hidden="true" size={14} /> Agra, India <span>·</span> VIT Chennai</p>
+          </div>
+          <aside className={styles.heroSideNote} aria-label="Areas of focus">
+            <span className={styles.sideIndex}>01 / PRESENCE</span>
+            <span>Engineering<br />Cyber security<br />Cloud exploration</span>
+          </aside>
+          <div className={styles.heroContent}>
+            <p className={styles.heroEyebrow}>Software development · security · cloud</p>
             <h1 id="hero-title" aria-label="Abhijeet Kumar">
               <span data-hero-word>Abhijeet</span>
               <span data-hero-word className={styles.titleSoft}>Kumar<span className={styles.period}>.</span></span>
@@ -48,15 +59,11 @@ export default function HomePage() {
               <small>As of {site.proofAsOf}</small>
             </div>
           </div>
-          <div className={styles.heroPortrait}>
-            <div className={styles.portraitFrame}>
-              <Image src="/images/profile/portrait-professional.png" alt="Portrait in a white shirt" fill sizes="(max-width: 800px) 70vw, 35vw" className={styles.portraitImage} />
-              <span className={styles.portraitIndex}>AK / 01</span>
-            </div>
-            <p className={styles.location}><MapPin aria-hidden="true" size={14} /> Agra, India <span>·</span> VIT Chennai</p>
+          <div className={styles.heroFoot} aria-hidden="true">
+            <span>Scroll to discover</span><span className={styles.heroRule} />
+            <span className={styles.heroFootNote}>A student of software, systems, and security</span>
           </div>
         </div>
-        <div className={styles.heroFoot} aria-hidden="true"><span>Scroll to explore</span><span className={styles.heroRule} /></div>
       </section>
 
       <section className={`pageShell ${styles.about} sectionSpace`} id="about" aria-labelledby="about-title">

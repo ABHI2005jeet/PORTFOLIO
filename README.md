@@ -1,53 +1,87 @@
-# Abhijeet Kumar — Portfolio
+# Abhijeet Kumar
 
-A personal portfolio for selected software projects, internship experience, and current areas of learning.
+**Software development · Cyber security · Cloud**
 
-![Portfolio homepage preview](docs/portfolio-preview.png)
+Pre-final-year B.Tech CSE (Cyber Security) student at VIT Chennai, building practical software and learning how it reaches people.
+
+[Repository](https://github.com/ABHI2005jeet/PORTFOLIO) · [GitHub](https://github.com/ABHI2005jeet) · [LinkedIn](https://www.linkedin.com/in/abhijeet-kumar-357ba5329/) · [Résumé](public/resume/Abhijeet_Kumar_Resume_Final_v8.pdf)
+
+![Portfolio homepage](docs/portfolio-preview.png)
+
+This portfolio brings together selected projects, internship experience, and current learning across software engineering, security, cloud, and DevOps. The visual direction keeps the site personal while making the work easy to explore.
+
+## What’s here
+
+- **15 project pages** with summaries, technologies, source links, and contribution details.
+- **Experience and education** drawn from my résumé.
+- **Skills explorer** with keyboard-accessible tabs and project filters.
+- **Off-duty section** with the interests and five photos I chose to share.
+- **Résumé and contact links** in the site navigation.
 
 ## Built with
 
-Next.js App Router, React, TypeScript, SCSS Modules, GSAP, and Three.js. The hero remains readable before the visual effect loads and when motion is disabled.
+| Area | Tools |
+| --- | --- |
+| App | Next.js App Router, React, TypeScript |
+| Styling | SCSS Modules, local Fraunces and Hanken Grotesk fonts |
+| Motion and visuals | GSAP, Three.js, custom shader atmosphere |
+| Quality | Playwright, axe-core, ESLint, TypeScript |
+| Hosting target | Vercel |
+
+The page content is server-rendered. Motion respects `prefers-reduced-motion`, can be switched off in the site header, and the WebGL atmosphere is deferred to compatible desktop devices.
+
+## Performance and checks
+
+Three Lighthouse runs against the local production build; values below are medians. The mobile profile uses Lighthouse’s mobile emulation and the desktop profile uses its desktop preset.
+
+| Lighthouse metric | Mobile | Desktop |
+| --- | ---: | ---: |
+| Performance | 86 | 99 |
+| Accessibility | 100 | 100 |
+| Best practices | 100 | 100 |
+| SEO | 100 | 100 |
+| Largest Contentful Paint | 4.05 s | 0.87 s |
+| First Contentful Paint | 1.07 s | 0.30 s |
+| Total Blocking Time | 108 ms | 51 ms |
+| Cumulative Layout Shift | 0.010 | 0.030 |
+
+The scores are snapshots from Lighthouse 13.6.0 and Chrome on a local machine; real devices and networks will vary. The browser suite passes **41 checks**, including WCAG 2.2 AA axe scans on all 17 public routes and overflow checks at 360, 390, 768, 1024, 1440, and 1920 pixels.
 
 ## Run locally
 
+Requires Node.js 20.9 or later.
+
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Update the content
-
-| File | Content |
-| --- | --- |
-| `content/site.ts` | Profile details, links, and dated proof values |
-| `content/projects.ts` | Project summaries, links, case studies, and visibility |
-| `content/experience.ts` | Education and internship timeline |
-| `content/skills.ts` | Skill tracks and experience levels |
-| `content/offduty.ts` | Personal interests |
-
-Set a project's visibility to `featured`, `listed`, or `hidden`. Hidden projects are excluded from the site and generated text feeds.
-
-### Photos and résumé
-
-Replace the image files under `public/images/` while keeping their filenames to update the portraits without changing code. Put the résumé at `public/resume/Abhijeet_Kumar_Resume_Final_v8.pdf`; the header links to that file.
-
-## Checks
+Useful checks:
 
 ```bash
 npm run lint
 npm run typecheck
 npm run build
 npm run test:e2e
-npm run analyze
 npm run audit
 ```
 
-## Deploy to Vercel
+## Update portfolio content
 
-Import this GitHub repository into Vercel and keep the detected Next.js settings. After the first deployment, set `NEXT_PUBLIC_SITE_URL` to the assigned production URL and redeploy; this enables canonical URLs and the production sitemap entries. No custom domain is currently configured.
+| File | Content |
+| --- | --- |
+| `content/site.ts` | Profile, social links, and dated profile figures |
+| `content/projects.ts` | Project descriptions, links, visibility, and contributions |
+| `content/experience.ts` | Education and experience timeline |
+| `content/skills.ts` | Skill groups and learning tracks |
+| `content/offduty.ts` | Personal interests |
 
-## Notes
+Project visibility can be set to `featured`, `listed`, or `hidden`. Hidden projects are left out of the site and generated text feeds. Replace images under `public/images/` with files of the same names to update the photos; the résumé path is `public/resume/Abhijeet_Kumar_Resume_Final_v8.pdf`.
 
-The résumé and project facts are maintained in `content/`. Decisions and details that still need confirmation are in `TODO.md` and `ASSUMPTIONS.md`. Font files and their open licenses are in `public/fonts/`.
+## Deploy
+
+The repository is ready to import into Vercel with the detected Next.js settings. After the first deployment, set `NEXT_PUBLIC_SITE_URL` to the assigned Vercel URL and redeploy to enable canonical URLs and production sitemap entries. No custom domain is configured.
+
+Project facts and remaining follow-ups are tracked in [`ASSUMPTIONS.md`](ASSUMPTIONS.md) and [`TODO.md`](TODO.md).
