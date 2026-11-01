@@ -256,7 +256,7 @@ export const projects: Project[] = [
     visibility: "listed",
     repoUrl: "https://github.com/Hareekshith/BlindSpot",
     stack: [],
-    role: "Contributor (as confirmed by Abhijeet).",
+    role: "Contributor.",
     pendingDetails: true,
   },
   {

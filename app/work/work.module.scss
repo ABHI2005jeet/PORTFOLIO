@@ -1,7 +1,7 @@
 .intro { padding-block: clamp(5rem, 10vw, 9rem) 2rem; }
 .introRow { display: grid; grid-template-columns: 1.1fr 0.7fr; align-items: end; gap: 3rem; margin-top: 2rem; }
 .intro h1 { font-family: var(--font-display); font-size: clamp(4rem, 9vw, 8.5rem); font-weight: 400; letter-spacing: -0.06em; line-height: 0.9; }
-.intro h1 em { color: var(--ice); font-weight: 400; }
+.intro h1 em { color: var(--ice); font-style: normal; font-weight: 400; }
 .introRow > p { max-width: 48ch; margin-bottom: 0.4rem; color: var(--mist); font-size: 1.08rem; }
 .jumpLink { display: inline-flex; min-height: 48px; align-items: center; gap: 0.65rem; margin-top: 2rem; color: var(--bone); font-size: 0.86rem; }
 .jumpLink svg, .workEnd svg { color: var(--ice); }

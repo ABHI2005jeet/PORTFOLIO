@@ -14,7 +14,7 @@
   --atmo-violet: #3b2a6b;
   --atmo-teal: #0f4c5c;
   --font-body: var(--font-hanken), "Segoe UI", sans-serif;
-  --font-display: "Iowan Old Style", "Baskerville", Georgia, "Times New Roman", serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --font-mono: var(--font-geist-mono), Consolas, monospace;
   --content-width: 1320px;
   --gutter: clamp(1.25rem, 5.4vw, 5.5rem);

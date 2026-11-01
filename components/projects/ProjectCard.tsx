@@ -8,7 +8,7 @@ const trackLabels = { sde: "SOFTWARE DEVELOPMENT", security: "CYBER SECURITY", "
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <article className={styles.card}>
-      <Link className={styles.caseLink} href={`/work/${project.slug}`} aria-label={`Read the ${project.title} case study`}>
+      <Link className={styles.caseLink} href={`/work/${project.slug}`}>
         <div className={`${styles.art} ${styles[project.illustration ?? "generic"]}`} aria-hidden="true">
           <div className={styles.artGrid} />
           <span className={styles.artOrb} />
@@ -26,8 +26,8 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       <div className={styles.cardBottom}>
         <ul aria-label="Technology stack">{project.stack.slice(0, 4).map((item) => <li key={item}>{item}</li>)}</ul>
         <div className={styles.cardLinks}>
-          {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} source repository`}><ArrowUpRight aria-hidden="true" size={15} /> Repo</a>}
-          {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} live demo`}><ArrowUpRight aria-hidden="true" size={15} /> Live</a>}
+          {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" aria-label={`Repo for ${project.title}`}><ArrowUpRight aria-hidden="true" size={15} /> Repo</a>}
+          {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Live demo for ${project.title}`}><ArrowUpRight aria-hidden="true" size={15} /> Live</a>}
         </div>
       </div>
     </article>

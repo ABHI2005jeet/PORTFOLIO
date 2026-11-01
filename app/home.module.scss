@@ -14,9 +14,10 @@
 .availability > span { width: 7px; height: 7px; border-radius: 50%; background: #9dd4a9; box-shadow: 0 0 14px rgb(157 212 169 / 70%); }
 .hero h1 { display: flex; flex-direction: column; margin-top: 1.1rem; font-family: var(--font-display); font-size: clamp(4rem, 8.9vw, 8.8rem); font-weight: 400; letter-spacing: -0.065em; line-height: 0.91; }
 .hero h1 > span { display: block; overflow: hidden; padding-bottom: 0.06em; }
-.titleSoft { color: var(--mist); font-style: italic; }
+.titleSoft { color: var(--mist); font-family: var(--font-fraunces-italic); font-style: italic; }
 .period { color: var(--ice); }
-.heroIntro { max-width: 55ch; margin-top: clamp(1.8rem, 3vw, 2.6rem); color: var(--mist); font-size: clamp(1.05rem, 1.6vw, 1.23rem); line-height: 1.6; }
+.heroStatement { max-width: 35ch; margin-top: clamp(1.5rem, 3vw, 2.3rem); color: var(--bone); font-family: var(--font-display); font-size: clamp(1.35rem, 2.1vw, 1.8rem); letter-spacing: -0.025em; line-height: 1.25; }
+.heroIntro { max-width: 55ch; margin-top: 0.85rem; color: var(--mist); font-size: clamp(1.05rem, 1.6vw, 1.23rem); line-height: 1.6; }
 .heroActions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; margin-top: 2rem; }
 .primaryLink { display: inline-flex; min-height: 50px; align-items: center; gap: 0.9rem; padding: 0 1.2rem; border: 1px solid rgb(140 169 216 / 50%); color: var(--bone); background: linear-gradient(100deg, rgb(119 115 168 / 15%), rgb(140 169 216 / 7%)); transition: border-color var(--duration-base) ease, background var(--duration-base) ease; }
 .primaryLink:hover { border-color: var(--ice); background: rgb(140 169 216 / 15%); }
@@ -26,7 +27,7 @@
 .proofStrip strong { font-size: 0.9rem; font-weight: 600; }
 .proofStrip a span, .proofStrip small { color: var(--mist); font: 0.68rem var(--font-mono); }
 .proofStrip small { align-self: end; padding-bottom: 0.5rem; }
-.heroPortrait { position: relative; width: min(100%, 390px); justify-self: end; }
+.heroPortrait { position: relative; width: min(100%, 240px); justify-self: end; }
 .portraitFrame { position: relative; width: 100%; aspect-ratio: 0.78; overflow: hidden; border: 1px solid rgb(233 231 226 / 18%); background: var(--raised); }
 .portraitFrame::after { position: absolute; inset: 50% 0 0; content: ""; background: linear-gradient(0deg, rgb(9 10 15 / 68%), transparent); pointer-events: none; }
 .portraitImage { object-fit: cover; object-position: 50% 22%; filter: saturate(0.72) contrast(1.02); }
@@ -40,7 +41,7 @@
 .sectionKicker { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: clamp(2rem, 5vw, 4.5rem); }
 .sectionKicker > .monoLabel { text-align: right; }
 .aboutGrid { display: grid; grid-template-columns: 1.06fr 0.94fr; gap: clamp(2rem, 8vw, 8rem); align-items: start; }
-.aboutCopy h2 em, .sectionHeadingRow h2 em, .skillIntro h2 em, .journeyGrid h2 em, .offDutyGrid h2 em { color: var(--ice); font-weight: 400; }
+.aboutCopy h2 em, .sectionHeadingRow h2 em, .skillIntro h2 em, .journeyGrid h2 em, .offDutyGrid h2 em { color: var(--ice); font-style: normal; font-weight: 400; }
 .aboutText { max-width: 54ch; margin: 2.2rem 0 0 auto; color: var(--mist); }
 .aboutText p + p { margin-top: 1rem; }
 .aboutLinks { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin-top: 1.7rem; }
@@ -100,7 +101,7 @@
   .hero { min-height: auto; }
   .heroGrid { grid-template-columns: minmax(0, 1fr) minmax(200px, 0.55fr); gap: 2.5rem; }
   .hero h1 { font-size: clamp(3.8rem, 9vw, 6.6rem); }
-  .heroPortrait { width: min(100%, 300px); }
+  .heroPortrait { width: min(100%, 240px); }
   .proofStrip { grid-template-columns: repeat(3, max-content); gap: 0.5rem 1.4rem; }
   .proofStrip small { grid-column: 1 / -1; justify-self: start; }
   .aboutGrid, .journeyGrid, .offDutyGrid { gap: 3rem; }

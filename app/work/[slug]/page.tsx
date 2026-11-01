@@ -60,7 +60,7 @@ export default async function ProjectPage({ params }: Props) {
           <aside className={styles.projectFacts}>
             {(caseStudy?.role ?? project.role) && <div><span className="monoLabel">MY ROLE</span><p>{caseStudy?.role ?? project.role}</p></div>}
             {project.stack.length > 0 && <div><span className="monoLabel">TECHNOLOGY</span><ul>{project.stack.map((technology) => <li key={technology}>{technology}</li>)}</ul></div>}
-            {project.pendingDetails && <div className={styles.pending}><span className="monoLabel">DETAILS PENDING</span><p>Abhijeet confirms contributing to this project. The supplied repository URL is shown above; unverified scope and technical details are left out.</p></div>}
+            {project.pendingDetails && <div className={styles.pending}><span className="monoLabel">DETAILS PENDING</span><p>The contribution is confirmed. The supplied repository URL is shown above; unverified scope and technical details are left out.</p></div>}
           </aside>
           <div className={styles.narrative}>
             {project.problem && <section><span className="monoLabel">01 / CONTEXT</span><h2>What I was exploring</h2><p>{project.problem}</p></section>}

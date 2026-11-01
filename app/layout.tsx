@@ -9,7 +9,9 @@ import { MotionProvider } from "@/components/motion/MotionProvider";
 import { MotionOrchestrator } from "@/components/motion/MotionOrchestrator";
 import "./globals.scss";
 
-const body = localFont({ src: "../node_modules/next/dist/next-devtools/server/font/geist-latin.woff2", display: "swap", variable: "--font-hanken", weight: "100 900", fallback: ["Arial", "sans-serif"] });
+const body = localFont({ src: "../public/fonts/hanken-grotesk-latin.woff2", display: "swap", variable: "--font-hanken", weight: "300 900", fallback: ["Arial", "sans-serif"] });
+const display = localFont({ src: "../public/fonts/fraunces-latin.woff2", display: "swap", variable: "--font-fraunces", weight: "400 700", fallback: ["Georgia", "serif"] });
+const displayItalic = localFont({ src: "../public/fonts/fraunces-latin-italic.woff2", display: "swap", variable: "--font-fraunces-italic", weight: "400 700", style: "italic", fallback: ["Georgia", "serif"] });
 const mono = localFont({ src: "../node_modules/next/dist/next-devtools/server/font/geist-mono-latin.woff2", display: "swap", variable: "--font-geist-mono", weight: "100 900", fallback: ["Consolas", "monospace"] });
 
 const siteUrl = getSiteUrl();
@@ -46,7 +48,7 @@ const personSchema = {
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const nonce = (await headers()).get("x-nonce") ?? undefined;
   return (
-    <html lang="en-IN" className={[body.variable, mono.variable].join(" ")} style={{ background: "#090a0f" }}>
+    <html lang="en-IN" className={[body.variable, display.variable, displayItalic.variable, mono.variable].join(" ")} style={{ background: "#090a0f" }}>
       <body>
         <MotionProvider>
           <a className="skipLink" href="#main-content">Skip to content</a>

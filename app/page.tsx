@@ -29,13 +29,13 @@ export default function HomePage() {
           <div className={styles.heroCopy}>
             <div className={styles.availability}><span aria-hidden="true" /> Looking for software development internships</div>
             <p className="sectionEyebrow">Software development · security · cloud</p>
-            <h1 id="hero-title" aria-label="I build software with curiosity and care.">
-              <span data-hero-word>I build software</span>
-              <span data-hero-word className={styles.titleSoft}>with curiosity</span>
-              <span data-hero-word>and care<span className={styles.period}>.</span></span>
+            <h1 id="hero-title" aria-label="Abhijeet Kumar">
+              <span data-hero-word>Abhijeet</span>
+              <span data-hero-word className={styles.titleSoft}>Kumar<span className={styles.period}>.</span></span>
             </h1>
+            <p className={styles.heroStatement} data-hero-intro>I build software with curiosity and care.</p>
             <p className={styles.heroIntro} data-hero-intro>
-              I’m Abhijeet, a pre-final-year engineering student in Agra. Full-stack development is my core; security, cloud, and DevOps are where I keep exploring.
+              I’m a pre-final-year engineering student in Agra. Full-stack development is my core; security, cloud, and DevOps are where I keep exploring.
             </p>
             <div className={styles.heroActions} data-hero-intro>
               <Link className={styles.primaryLink} href="/work">Explore selected work <MoveUpRight aria-hidden="true" size={16} /></Link>
@@ -50,7 +50,7 @@ export default function HomePage() {
           </div>
           <div className={styles.heroPortrait}>
             <div className={styles.portraitFrame}>
-              <Image src="/images/profile/portrait-professional.png" alt="Abhijeet Kumar in a white shirt" fill priority sizes="(max-width: 800px) 70vw, 35vw" className={styles.portraitImage} />
+              <Image src="/images/profile/portrait-professional.png" alt="Portrait in a white shirt" fill sizes="(max-width: 800px) 70vw, 35vw" className={styles.portraitImage} />
               <span className={styles.portraitIndex}>AK / 01</span>
             </div>
             <p className={styles.location}><MapPin aria-hidden="true" size={14} /> Agra, India <span>·</span> VIT Chennai</p>
@@ -76,8 +76,8 @@ export default function HomePage() {
             </div>
           </div>
           <div className={styles.photoStory} role="group" aria-label="A few moments away from my desk">
-            <figure className={styles.photoMain}><Image src="/images/about/festival-candid.png" alt="Abhijeet standing at a festival installation" fill sizes="(max-width: 800px) 78vw, 34vw" /><figcaption>Outside the usual tabs</figcaption></figure>
-            <figure className={styles.photoSmall}><Image src="/images/about/classroom-candid.png" alt="Abhijeet in a classroom between lectures" fill sizes="(max-width: 800px) 37vw, 16vw" /><figcaption>Campus, Chennai</figcaption></figure>
+            <figure className={styles.photoMain}><Image src="/images/about/festival-candid.png" alt="Standing at a festival installation" fill sizes="(max-width: 800px) 78vw, 34vw" /><figcaption>Outside the usual tabs</figcaption></figure>
+            <figure className={styles.photoSmall}><Image src="/images/about/classroom-candid.png" alt="In a classroom between lectures" fill sizes="(max-width: 800px) 37vw, 16vw" /><figcaption>Campus, Chennai</figcaption></figure>
             <span className={styles.photoNote}>NOT EVERYTHING HAPPENS IN A TERMINAL</span>
           </div>
         </div>
@@ -125,8 +125,8 @@ export default function HomePage() {
             <div className={styles.interestList}><h3>On screen</h3><p><span>Anime</span>{offDuty.anime.join(" · ")}</p><p><span>Series</span>{offDuty.shows.join(" · ")}</p><p><span>Films</span>{offDuty.films.join(" · ")}</p><p><span>Games</span>{offDuty.games.join(" · ")}</p><p><span>Reset</span>{offDuty.routines.join(" · ")}</p></div>
           </div>
           <div className={styles.offDutyPhotos}>
-            <figure className={styles.trainingPhoto}><Image src="/images/about/training-candid.png" alt="Abhijeet after a strength training session" fill sizes="(max-width: 800px) 48vw, 23vw" /><figcaption>Strength, consistency, repeat.</figcaption></figure>
-            <figure className={styles.casualPhoto}><Image src="/images/about/casual-candid.png" alt="A casual portrait of Abhijeet" fill sizes="(max-width: 800px) 48vw, 23vw" /><figcaption>A quieter moment</figcaption></figure>
+            <figure className={styles.trainingPhoto}><Image src="/images/about/training-candid.png" alt="After a strength training session" fill sizes="(max-width: 800px) 48vw, 23vw" /><figcaption>Strength, consistency, repeat.</figcaption></figure>
+            <figure className={styles.casualPhoto}><Image src="/images/about/casual-candid.png" alt="A casual portrait" fill sizes="(max-width: 800px) 48vw, 23vw" /><figcaption>A quieter moment</figcaption></figure>
           </div>
         </div>
       </section>
